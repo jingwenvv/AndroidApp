@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startingFragment">
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.cs4530spring2022.project1.fragments.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/viewProfileFragment"
+        android:name="com.cs4530spring2022.project1.fragments.ViewProfileFragment"
+        android:label="ViewProfileFragment" />
+    <fragment
+        android:id="@+id/calorieCalculatorFragment"
+        android:name="com.cs4530spring2022.project1.fragments.CalorieCalculatorFragment"
+        android:label="CalorieCalculatorFragment" />
+    <action android:id="@+id/action_global_viewProfileFragment" app:destination="@id/viewProfileFragment" />
+    <action android:id="@+id/action_global_calorieCalculatorFragment" app:destination="@id/calorieCalculatorFragment" />
+    <action android:id="@+id/action_global_hikeFragment" app:destination="@id/hikesFragment" />
+    <fragment
+        android:id="@+id/hikesFragment"
+        android:name="com.cs4530spring2022.project1.fragments.HikesFragment"
+        android:label="HikesFragment" />
+    <fragment
+        android:id="@+id/startingFragment"
+        android:name="com.cs4530spring2022.project1.fragments.StartingFragment"
+        android:label="StartingFragment"
+        tools:layout="@layout/fragment_starting" />
+    <fragment
+        android:id="@+id/stepFragment"
+        android:name="com.cs4530spring2022.project1.fragments.StepFragment"
+        android:label="StepFragment"
+        tools:layout="@layout/fragment_step" />
+    <action
+        android:id="@+id/action_global_startingFragment"
+        app:destination="@id/startingFragment" />
+    <action
+        android:id="@+id/action_global_stepFragment"
+        app:destination="@id/stepFragment" />
+    <action
+        android:id="@+id/action_global_editProfileFragment"
+        app:destination="@id/editProfileFragment" />
+</navigation>

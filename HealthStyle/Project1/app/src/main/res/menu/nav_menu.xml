@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fitness"
+        android:title="Fitness"
+        android:icon="@drawable/ic_fitness"/>
+    <item
+        android:title="Profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person"/>
+    <item
+        android:id="@+id/hikes"
+        android:title="Hikes"
+        android:icon="@drawable/ic_hikes"/>
+    <item
+        android:id="@+id/stepCounter"
+        android:title="Step Counter"
+        android:icon="@drawable/ic_baseline_directions_walk_24"/>
+</menu>

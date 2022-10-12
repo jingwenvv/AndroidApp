@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainProfileActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Top Bar -->
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/darker_gray"
+            android:paddingVertical="8dp"
+            android:text="Select a Module"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="36dp"
+            android:text="my user profile"
+            android:textSize="24dp"
+            android:background="@color/module_v"
+            app:layout_constraintTop_toBottomOf="@id/tv_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_fitness_tracker"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="36dp"
+            android:text="Fitness Tracker"
+            android:textSize="24dp"
+            android:background="@color/module_b"
+            app:layout_constraintTop_toBottomOf="@id/bt_user_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_find_hikes"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="36dp"
+            android:text="hikes near me"
+            android:textSize="24dp"
+            android:background="@color/module_g"
+            app:layout_constraintTop_toBottomOf="@id/bt_fitness_tracker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="36dp"
+            android:text="hikes near me"
+            android:textSize="24dp"
+            android:background="@color/module_y"
+            app:layout_constraintTop_toBottomOf="@id/bt_find_hikes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

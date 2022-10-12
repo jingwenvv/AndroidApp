@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainProfileActivity"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- Top Bar -->
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hz_g2"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="16dp"
+            android:text="Step Counter"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <!-- PFP -->
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:background="@android:color/darker_gray"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_header"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <View
+            android:id="@+id/cnt_weather"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_header"
+            android:background="@color/hz_g1"
+            />
+
+        <!-- Weather Info -->
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingHorizontal="12dp"
+            tools:text="123.0°F  -  Partly Cloudy"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            android:textStyle="bold"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="@id/cnt_weather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_cityCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:paddingVertical="0dp"
+            android:paddingHorizontal="16dp"
+            tools:text="City, Country"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@id/tv_temp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-35dp"
+            android:textSize="120dp"
+            android:text="0"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:textColor="@color/hz_g2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_stepsLabel"/>
+
+        <TextView
+            android:id="@+id/tv_stepsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf= "@id/tv_cityCountry"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/hz_g1"
+            android:text="Steps:"
+            android:layout_margin="20dp"
+            android:textSize="40dp"
+            />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_Stop"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="0dp"
+                android:background="@color/hz_r1"
+                android:text="Stop"
+                android:textColor="@android:color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_steps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bt_Start" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_Start"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="0dp"
+                android:background="@color/hz_g2"
+                android:text="Start"
+                android:textColor="@android:color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_steps"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bt_Stop"/>
+
+        <TextView
+            android:id="@+id/tv_t_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:textAlignment="center"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="24dp"
+            android:textColor="@color/white"
+            android:background="@color/hz_g1"
+            android:text="My History"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/bt_Stop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_previousOne"
+            android:background="@color/hz_lgrey"      />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_previousThree"
+            android:background="@color/hz_lgrey"      />
+
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:text="Step Record:"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_t_history"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_recordValue"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="24dp"
+            app:layout_constraintTop_toTopOf="@id/tv_record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="Recent History:"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_recordValue"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_previousOne"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="24dp"
+            app:layout_constraintTop_toTopOf="@id/tv_previous"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            />
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_previousTwo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:paddingVertical="8dp"
+             android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_previousOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_previousThree"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_previousTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
